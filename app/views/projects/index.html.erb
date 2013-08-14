@@ -1,0 +1,15 @@
+<!-- chen them project.css vao application.html.erb -->
+<!-- Khong can trong rails 3 -->
+<%# content_for :head do %>
+	<%#= stylesheet_link_tag 'projects' %>
+<%# end %>
+<h2>Projects</h2>
+<ul>
+	<% for project in @projects %>
+		<li>
+			<%= project.name %>
+			<%= link_to "Destroy",confirm_destroy_project_path(project)%>
+		</li>
+
+	<% end %>
+</ul>

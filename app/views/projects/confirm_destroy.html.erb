@@ -1,0 +1,10 @@
+<% provide(:title,'Confirm Destroy Project')%>
+
+<% form_for :project, :url =>project_path(@project), :html=> {:method=>:delete} do |f| %>
+	<h2>Are you want to destroy this project?</h2>
+	<p>
+		<%= submit_tag "Destroy" %>
+		<%#= submit_tag "Destroy" %>
+		or <%= link_to "Cancel", projects_path %>
+	</p>
+<% end %>
